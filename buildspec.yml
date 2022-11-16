@@ -9,5 +9,5 @@ phases:
     commands: 
       - "aws cloudformation package --template-file template.yaml --s3-bucket lambda-ci-cd-demo-bucket --output-template-file outputTemplate.yaml"
     runtime-versions: 
-      python: 3.1
+      python: 3.10
 version: 0.2

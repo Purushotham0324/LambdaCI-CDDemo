@@ -1,12 +1,13 @@
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      python: 3.10
-    commands:
-      - aws cloudformation package --template-file template.yaml --s3-bucket lambda-ci-cd-demo-bucket --output-template-file outputTemplate.yaml
-artifacts:
-  type: zip
-  files:
+--- 
+artifacts: 
+  files: 
     - template.yaml
     - outputTemplate.yaml
+  type: zip
+phases: 
+  install: 
+    commands: 
+      - "aws cloudformation package --template-file template.yaml --s3-bucket lambda-ci-cd-demo-bucket --output-template-file outputTemplate.yaml"
+    runtime-versions: 
+      python: 3.1
+version: 0.2

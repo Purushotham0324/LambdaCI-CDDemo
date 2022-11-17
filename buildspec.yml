@@ -8,7 +8,7 @@ phases:
   install: 
     commands: 
       - aws --version
-      - "aws cloudformation package --template-file template.yaml --s3-bucket lambda-ci-cd-demo-bucket --output-template-file outputTemplate.yaml"
+      - "aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-us-west-1-166209559445 --output-template-file outputTemplate.yaml"
     runtime-versions: 
       python: 3.10
 version: 0.2
